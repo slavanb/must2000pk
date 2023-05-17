@@ -1,0 +1,14 @@
+{
+    "name": "Must2000PK",
+    "description": "Must2000PK modbus",
+    "version": "0.0.1",
+    "dependencies": {
+           "node-red-contrib-flogger": "1.2.2"
+           },
+    "node-red": {
+        "settings": {
+            "flowFile": "flow.json",
+            "credentialsFile": ".flow_cred.json"
+        }
+    }
+}

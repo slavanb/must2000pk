@@ -1,0 +1,1843 @@
+[
+    {
+        "id": "6ec88b1ef275ca40",
+        "type": "tab",
+        "label": "Must 2000 PK",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "92339ac38c434f5f",
+        "type": "subflow",
+        "name": "MustMqttSetValue",
+        "info": "",
+        "category": "",
+        "in": [],
+        "out": [
+            {
+                "x": 960,
+                "y": 40,
+                "wires": [
+                    {
+                        "id": "100361d6d9470190",
+                        "port": 0
+                    },
+                    {
+                        "id": "3fcdf8dfd434618e",
+                        "port": 0
+                    },
+                    {
+                        "id": "d90f5f5a7e6534d0",
+                        "port": 0
+                    },
+                    {
+                        "id": "0aada5094c61ab8c",
+                        "port": 0
+                    },
+                    {
+                        "id": "16b4333bbb22b745",
+                        "port": 0
+                    },
+                    {
+                        "id": "b589801fc7195699",
+                        "port": 0
+                    },
+                    {
+                        "id": "47512615d52dc46b",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "db303f09e343fc96",
+        "type": "subflow",
+        "name": "InfoDash",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 80,
+                "y": 300,
+                "wires": [
+                    {
+                        "id": "04e9b1f4a524c7d5"
+                    },
+                    {
+                        "id": "d54b345e35862263"
+                    },
+                    {
+                        "id": "9afe66a3edb7fd80"
+                    },
+                    {
+                        "id": "1721bec1c48280a8"
+                    },
+                    {
+                        "id": "2ea79fa13208a360"
+                    },
+                    {
+                        "id": "3d6cc3456d64075e"
+                    },
+                    {
+                        "id": "9edd72fdab4e51b4"
+                    },
+                    {
+                        "id": "aeb46edbac0c1030"
+                    },
+                    {
+                        "id": "2d13639a6ed12461"
+                    },
+                    {
+                        "id": "eec1e777388f2c88"
+                    }
+                ]
+            }
+        ],
+        "out": [],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "cb4dcc638f922d54",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "aa2ca8cbb7947248",
+        "type": "config-log",
+        "logname": "Must2000PK",
+        "logdir": "/home/slava/.log/Must2000PK",
+        "stamp": "utc",
+        "logstyle": "plain",
+        "logrotate": false,
+        "logcompress": false,
+        "logrotatecount": "5",
+        "logsize": "1000"
+    },
+    {
+        "id": "b2e4a8770521f57e",
+        "type": "mqtt-broker",
+        "name": "Mqqt LVB",
+        "broker": "mqtt.lvb.sumy.ua",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "13fdf275c49fb938",
+        "type": "serial-port",
+        "serialport": "/dev/ttyUSB0",
+        "serialbaud": "9600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "500",
+        "bin": "bin",
+        "out": "time",
+        "addchar": "",
+        "responsetimeout": "10000"
+    },
+    {
+        "id": "f8d2bfab0cc8aaa2",
+        "type": "ui_tab",
+        "name": "Tab 1",
+        "icon": "dashboard",
+        "order": 1
+    },
+    {
+        "id": "7c68cb528fa3b4aa",
+        "type": "ui_group",
+        "name": "getInfo",
+        "tab": "f8d2bfab0cc8aaa2",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "be8b9bee0b336dd5",
+        "type": "ui_group",
+        "name": "setInfo",
+        "tab": "f8d2bfab0cc8aaa2",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "93396247339a174f",
+        "type": "ui_group",
+        "name": "Мощность",
+        "tab": "f8d2bfab0cc8aaa2",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "d380ddd1ca07c58b",
+        "type": "ui_group",
+        "name": "Info",
+        "tab": "f8d2bfab0cc8aaa2",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "32cba45f031d7340",
+        "type": "mqtt in",
+        "z": "92339ac38c434f5f",
+        "name": "setAbsorbitionChargeVoltage",
+        "topic": "lvb/solar/must2000pk/setAbsorbitionChargeVoltage/set",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "b2e4a8770521f57e",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 140,
+        "y": 80,
+        "wires": [
+            [
+                "100361d6d9470190"
+            ]
+        ]
+    },
+    {
+        "id": "9f31f1cbd2f1d0d0",
+        "type": "mqtt in",
+        "z": "92339ac38c434f5f",
+        "name": "setMaxChargerCurrent",
+        "topic": "lvb/solar/must2000pk/setMaxChargerCurrent/set",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "b2e4a8770521f57e",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 120,
+        "y": 120,
+        "wires": [
+            [
+                "3fcdf8dfd434618e"
+            ]
+        ]
+    },
+    {
+        "id": "100361d6d9470190",
+        "type": "function",
+        "z": "92339ac38c434f5f",
+        "name": "setAbsorbitionChargeVoltageFun",
+        "func": "var adress = 31003;\nvar val = msg.payload * 10;\nmsg.payload = { adress, val };\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3fcdf8dfd434618e",
+        "type": "function",
+        "z": "92339ac38c434f5f",
+        "name": "setMaxChargerCurrentFun",
+        "func": "var adress = 31005;\nvar val = msg.payload ;\nmsg.payload = { adress, val };\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5ddd4e0ada1bbf41",
+        "type": "mqtt in",
+        "z": "92339ac38c434f5f",
+        "name": "ChargePrioritySet",
+        "topic": "lvb/solar/must2000pk/chargepriority/set",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "b2e4a8770521f57e",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 110,
+        "y": 40,
+        "wires": [
+            [
+                "d90f5f5a7e6534d0"
+            ]
+        ]
+    },
+    {
+        "id": "d90f5f5a7e6534d0",
+        "type": "function",
+        "z": "92339ac38c434f5f",
+        "name": "ChargePrioritySetFun",
+        "func": "var adress = 31013;\nvar val = msg.payload;\nmsg.payload = { adress, val };\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 40,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0aada5094c61ab8c",
+        "type": "function",
+        "z": "92339ac38c434f5f",
+        "name": "Сохранение старых значений формы",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1140,
+        "y": 220,
+        "wires": [
+            [
+                "442bbb8ec941feed"
+            ]
+        ]
+    },
+    {
+        "id": "442bbb8ec941feed",
+        "type": "ui_form",
+        "z": "92339ac38c434f5f",
+        "name": "",
+        "label": "setInfo",
+        "group": "be8b9bee0b336dd5",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "Adress",
+                "value": "adress",
+                "type": "number",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Value",
+                "value": "val",
+                "type": "number",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "adress": "",
+            "val": ""
+        },
+        "payload": "",
+        "submit": "submit",
+        "cancel": "cancel",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "className": "",
+        "x": 1150,
+        "y": 40,
+        "wires": [
+            [
+                "0aada5094c61ab8c"
+            ]
+        ]
+    },
+    {
+        "id": "091300c49f2e52e7",
+        "type": "mqtt in",
+        "z": "92339ac38c434f5f",
+        "name": "setChargeCurrentFromGridDC",
+        "topic": "lvb/solar/must2000pk/setChargeCurrentFromGridDC/set",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "b2e4a8770521f57e",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 150,
+        "y": 160,
+        "wires": [
+            [
+                "16b4333bbb22b745"
+            ]
+        ]
+    },
+    {
+        "id": "16b4333bbb22b745",
+        "type": "function",
+        "z": "92339ac38c434f5f",
+        "name": "setChargeCurrentFromGridDC",
+        "func": "var adress = 31011;\nvar val = msg.payload ;\nmsg.payload = { adress, val };\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "72f1d327dde689a4",
+        "type": "mqtt in",
+        "z": "92339ac38c434f5f",
+        "name": "setFloatChargeVoltage",
+        "topic": "lvb/solar/must2000pk/setFloatChargeVoltage/set",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "b2e4a8770521f57e",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 120,
+        "y": 200,
+        "wires": [
+            [
+                "b589801fc7195699"
+            ]
+        ]
+    },
+    {
+        "id": "b589801fc7195699",
+        "type": "function",
+        "z": "92339ac38c434f5f",
+        "name": "setFloatChargeVoltage",
+        "func": "var adress = 31004;\nvar val = msg.payload * 10;\nmsg.payload = { adress, val };\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8994930a109fb527",
+        "type": "mqtt in",
+        "z": "92339ac38c434f5f",
+        "name": "lvb/solar/must2000pk/json/set",
+        "topic": "lvb/solar/must2000pk/json/set",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "b2e4a8770521f57e",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 140,
+        "y": 300,
+        "wires": [
+            [
+                "47512615d52dc46b"
+            ]
+        ]
+    },
+    {
+        "id": "47512615d52dc46b",
+        "type": "function",
+        "z": "92339ac38c434f5f",
+        "name": "JSON",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7ae68ae6faa6dd88",
+        "type": "ui_gauge",
+        "z": "db303f09e343fc96",
+        "name": "",
+        "group": "93396247339a174f",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Нагрузка",
+        "label": "W",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1200",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "400",
+        "seg2": "800",
+        "className": "",
+        "x": 600,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "04e9b1f4a524c7d5",
+        "type": "function",
+        "z": "db303f09e343fc96",
+        "name": "loadPowerW",
+        "func": "\nvar Must = msg.payload;\n\nmsg.payload = Must.loadPowerW;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 20,
+        "wires": [
+            [
+                "7ae68ae6faa6dd88"
+            ]
+        ]
+    },
+    {
+        "id": "8449c0e03c69807a",
+        "type": "ui_gauge",
+        "z": "db303f09e343fc96",
+        "name": "",
+        "group": "93396247339a174f",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "PowerPv",
+        "label": "W",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "330",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "100",
+        "seg2": "230",
+        "className": "",
+        "x": 600,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "d54b345e35862263",
+        "type": "function",
+        "z": "db303f09e343fc96",
+        "name": "PvPowerW",
+        "func": "\nvar Must = msg.payload;\n\nmsg.payload = Must.PvPowerW;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 60,
+        "wires": [
+            [
+                "8449c0e03c69807a"
+            ]
+        ]
+    },
+    {
+        "id": "74cbe8076d68e04b",
+        "type": "ui_gauge",
+        "z": "db303f09e343fc96",
+        "name": "",
+        "group": "93396247339a174f",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "batteryPower",
+        "label": "W",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1200",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "400",
+        "seg2": "800",
+        "className": "",
+        "x": 620,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "9afe66a3edb7fd80",
+        "type": "function",
+        "z": "db303f09e343fc96",
+        "name": "batteryPower",
+        "func": "\nvar Must = msg.payload;\n\nmsg.payload = Must.batteryPower;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 100,
+        "wires": [
+            [
+                "74cbe8076d68e04b"
+            ]
+        ]
+    },
+    {
+        "id": "592a87d215c44fc9",
+        "type": "ui_gauge",
+        "z": "db303f09e343fc96",
+        "name": "",
+        "group": "d380ddd1ca07c58b",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "batteryVoltageDC",
+        "label": "V",
+        "format": "{{value}}",
+        "min": "20",
+        "max": "30",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "27",
+        "seg2": "29",
+        "className": "",
+        "x": 630,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "1721bec1c48280a8",
+        "type": "function",
+        "z": "db303f09e343fc96",
+        "name": "batteryVoltageDC",
+        "func": "\nvar Must = msg.payload;\n\nmsg.payload = Must.batteryVoltageDC;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 140,
+        "wires": [
+            [
+                "592a87d215c44fc9"
+            ]
+        ]
+    },
+    {
+        "id": "2ea79fa13208a360",
+        "type": "function",
+        "z": "db303f09e343fc96",
+        "name": "WorkModeText",
+        "func": "\nvar Must = msg.payload;\n\nmsg.payload = Must.WorkModeText;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 200,
+        "wires": [
+            [
+                "8470e26a3061ea0b"
+            ]
+        ]
+    },
+    {
+        "id": "8470e26a3061ea0b",
+        "type": "ui_text",
+        "z": "db303f09e343fc96",
+        "group": "d380ddd1ca07c58b",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "WorkMode",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 670,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "9edd72fdab4e51b4",
+        "type": "function",
+        "z": "db303f09e343fc96",
+        "name": "PvVoltageDC",
+        "func": "\nvar Must = msg.payload;\n\nmsg.payload = Must.PvVoltageDC;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 280,
+        "wires": [
+            [
+                "f45e29ec225b1165"
+            ]
+        ]
+    },
+    {
+        "id": "aeb46edbac0c1030",
+        "type": "function",
+        "z": "db303f09e343fc96",
+        "name": "PvCurrentDC",
+        "func": "\nvar Must = msg.payload;\n\nmsg.payload = Must.PvCurrentDC;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 320,
+        "wires": [
+            [
+                "a646aa3d462866de"
+            ]
+        ]
+    },
+    {
+        "id": "3d6cc3456d64075e",
+        "type": "function",
+        "z": "db303f09e343fc96",
+        "name": "ChargePriorityText",
+        "func": "\nvar Must = msg.payload;\n\nmsg.payload = Must.ChargePriorityText;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 240,
+        "wires": [
+            [
+                "0d9db35560a610a2"
+            ]
+        ]
+    },
+    {
+        "id": "0d9db35560a610a2",
+        "type": "ui_text",
+        "z": "db303f09e343fc96",
+        "group": "d380ddd1ca07c58b",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "ChargePriority",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 680,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "f45e29ec225b1165",
+        "type": "ui_text",
+        "z": "db303f09e343fc96",
+        "group": "d380ddd1ca07c58b",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "PvVoltageDC",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 670,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "a646aa3d462866de",
+        "type": "ui_text",
+        "z": "db303f09e343fc96",
+        "group": "d380ddd1ca07c58b",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "PvCurrentDC",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 670,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "2d13639a6ed12461",
+        "type": "function",
+        "z": "db303f09e343fc96",
+        "name": "inVoltageAC",
+        "func": "\nvar Must = msg.payload;\n\nmsg.payload = Must.inVoltageAC;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 360,
+        "wires": [
+            [
+                "0b21b66357ff41bd"
+            ]
+        ]
+    },
+    {
+        "id": "0b21b66357ff41bd",
+        "type": "ui_text",
+        "z": "db303f09e343fc96",
+        "group": "d380ddd1ca07c58b",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "inVoltageAC",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 670,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "eec1e777388f2c88",
+        "type": "function",
+        "z": "db303f09e343fc96",
+        "name": "outVoltageAC",
+        "func": "\nvar Must = msg.payload;\n\nmsg.payload = Must.outVoltageAC;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 400,
+        "wires": [
+            [
+                "0df11d4b806e16c3"
+            ]
+        ]
+    },
+    {
+        "id": "0df11d4b806e16c3",
+        "type": "ui_text",
+        "z": "db303f09e343fc96",
+        "group": "d380ddd1ca07c58b",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "outVoltageAC",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 680,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "ade7d64f5cac6985",
+        "type": "inject",
+        "z": "6ec88b1ef275ca40",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 40,
+        "wires": [
+            [
+                "9380deceb8f1ab0f"
+            ]
+        ]
+    },
+    {
+        "id": "a1390c53d9c1e80d",
+        "type": "comment",
+        "z": "6ec88b1ef275ca40",
+        "name": "USB",
+        "info": "sudo chmod a+rw /dev/ttyUSB0   //for root  \n\nOkay thanks. When i run ls -l /dev/ttyUSB0 I get: crw--w---- 1 root tty 4, 64 Jan 12 14:02 /dev/ttyUSB0\n\nThere is a user called nodered so I added that to tty by running usermod -a -G tty nodered, but no luck.\n\nsudo dmesg | grep cp210x",
+        "x": 90,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "38b77970f7c6e1a8",
+        "type": "serial request",
+        "z": "6ec88b1ef275ca40",
+        "name": "",
+        "serial": "13fdf275c49fb938",
+        "x": 830,
+        "y": 100,
+        "wires": [
+            [
+                "fa65fd0d0ed7ac38",
+                "52ba4517499220e4"
+            ]
+        ]
+    },
+    {
+        "id": "14d0492e4b7533bd",
+        "type": "debug",
+        "z": "6ec88b1ef275ca40",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "fa65fd0d0ed7ac38",
+        "type": "function",
+        "z": "6ec88b1ef275ca40",
+        "name": "Работа с данными 1",
+        "func": "\n\n\n// msg.payload = [];\n\nvar msg1 = msg;\nvar msg2 = { payload: [] };\n\n\n\n\n\nvar buffer = msg.payload;\nvar s=\"\";\nvar outMsgArray=[];\nif (buffer.length>3)\n{\n\n    for (let index = 3; index < buffer.length-2; index=index+2) {\n        let b0 = buffer[index];\n        let b1 = buffer[index+1];\n        let b = b0*256+b1;\n  \n\n        s = s + b + ' | ';\n        outMsgArray.push(b);\n\n        \n    }\n}\n\n\nmsg1.payload=s;\nmsg2.payload = outMsgArray;\n\n\nreturn [msg1, msg2];",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 200,
+        "wires": [
+            [
+                "14d0492e4b7533bd",
+                "e845a8689b9c47f9",
+                "fc23789a1c092acd"
+            ],
+            [
+                "7169d0645251b640"
+            ]
+        ]
+    },
+    {
+        "id": "e845a8689b9c47f9",
+        "type": "flogger",
+        "z": "6ec88b1ef275ca40",
+        "d": true,
+        "name": "",
+        "logfile": "Must2000PK.log",
+        "inputchoice": "object",
+        "inputobject": "payload",
+        "inputobjectType": "msg",
+        "inputmoustache": "Recieved payload {{payload}} and topic {{topic}}",
+        "loglevel": "INFO",
+        "logconfig": "aa2ca8cbb7947248",
+        "sendpane": "",
+        "x": 600,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7169d0645251b640",
+        "type": "function",
+        "z": "6ec88b1ef275ca40",
+        "name": "Формирование объекта",
+        "func": "var Must2000 = flow.get('Must2000');\n\nvar Must = Must2000.Must;\nvar inMsgArray = msg.payload;\n\n\nif (Must2000.lastQueryId==0)\n{\n\nMust.version = inMsgArray[1];\nMust.status = inMsgArray[2];\n\n    switch (Must.status) {\n        case 1:\n            Must.statusText=\"INIT STATE\";\n            break;\n        case 2:\n            Must.statusText = \"SELF_CHEK\";\n            break;\n        case 3:\n            Must.statusText = \"BACKUP\";\n            break;\n        case 4:\n            Must.statusText = \"LINE\";\n            break;\n        case 5:\n            Must.statusText = \"STOP\";\n            break;\n        case 6:\n            Must.statusText = \"POWER_OFF\";\n            break;\n        case 7:\n            Must.statusText = \"CHARGER\";\n            break;\n        case 8:\n            Must.statusText = \"SOFT_START\";\n            break;\n                                                                                  \n        default:\n            Must.statusText = \"\";\n    }\n\n\nMust.systemVoltage = inMsgArray[3];\nMust.systemPower = inMsgArray[4];\nMust.inVoltageAC = inMsgArray[5]/10;\nMust.inFrquencyAC = inMsgArray[6]/10;\nMust.outVoltageAC = inMsgArray[7]/10;\nMust.outFrquencyAC = inMsgArray[8]/10;\nMust.loadCurrentAC = inMsgArray[9] / 10;\nMust.loadPowerW = inMsgArray[10];\nMust.loadPowerVA = inMsgArray[11] ;\nMust.loadPowerPercent = inMsgArray[12] ;\n\n\n\n\n\nMust.batteryVoltageDC = inMsgArray[14]/10;\n\n\nif (inMsgArray[15]>(256*128)){\n    Must.batteryCurrentDC = -(256*256 - inMsgArray[15])/10;\n}\nelse \n{\n    Must.batteryCurrentDC = (inMsgArray[15]) / 10;  \n}\n\nMust.inverterTemp = inMsgArray[18];  \n    Must.batteryPower = Math.round(Must.batteryVoltageDC * Must.batteryCurrentDC);\n\n}\n\nif (Must2000.lastQueryId == 1) {\n\n    Must.PvTemp = inMsgArray[3] ;  \n    Must.PvVoltageDC = inMsgArray[4]/10;  \n    Must.PvCurrentDC = inMsgArray[5]/10;  \n    Must.PvPowerW =    inMsgArray[6] ; \n\n}    \n\n\n\nif (Must2000.lastQueryId == 2) {\n//31000\n    switch (inMsgArray[0]) {\n    case 0:\n        Must.setFrquencyAC = 0;\n            Must.FrquencyAcText = \"50 Hz\";\n        break;\n    case 1:\n        Must.setFrquencyAC = 1;\n            Must.FrquencyAcText = \"60 Hz\";\n        break;\n}\n    switch (inMsgArray[1]) {\n        case 220:\n            Must.setVoltageAC = 220;\n            break;\n        case 230:\n            Must.setVoltageAC = 230;\n            break;\n    }\n\n    Must.setShutdownVoltage = inMsgArray[2]/10;\n    \n    Must.setAbsorbitionChargeVoltage = inMsgArray[3]/10;\n    Must.setFloatChargeVoltage = inMsgArray[4]/10;\n    Must.setMaxChargerCurrent = inMsgArray[5];\n   \n    switch (inMsgArray[6]) {\n        case 0:\n            Must.setBuzzer = 0;\n            Must.BuzzerText = \"ON\";\n            break;\n        case 1:\n            Must.setBuzzer = 1;\n            Must.BuzzerText = \"OFF\";\n            break;\n    }\n\n    switch (inMsgArray[9]) {\n        case 0:\n            Must.setBackLight = 0;\n            Must.BackLightText = \"OFF\";\n            break;\n        case 1:\n            Must.setBackLight = 1;\n            Must.BackLightText = \"ON\";\n            break;\n    }\n\n\n\n} \n\nif (Must2000.lastQueryId == 3) {\n    let ofs=1;\n    //31011\n\n\n    Must.setChargeCurrentFromGridDC = inMsgArray[1-ofs];\n    switch (inMsgArray[2-ofs]) {\n        case 0:\n            Must.setWorkMode = 0;\n            Must.WorkModeText = \"SOL\";\n            break;\n        case 1:\n            Must.setWorkMode = 1;\n            Must.WorkModeText = \"Utl\";\n            break;\n        case 2:\n            Must.setWorkMode = 2;\n            Must.WorkModeText = \"SBU\";\n            break;     \n    }\n\n    switch (inMsgArray[3 - ofs]) {\n        case 0:\n            Must.setChargePriority = 0;\n            Must.ChargePriorityText = \"solarFirst\";\n            break;\n        case 1:\n            Must.setChargePriority = 1;\n            Must.ChargePriorityText = \"onlySolar\";\n            break;\n        case 2:\n            Must.setChargePriority = 2;\n            Must.ChargePriorityText = \"GridFirst\";\n            break;\n\n        case 3:\n            Must.setChargePriority = 3;\n            Must.ChargePriorityText = \"UnionCharge\";\n            break;        \n\n    }\n\n    Must.setPoinChargeStop = inMsgArray[4 - ofs]/10;\n    Must.setPoinDisChargeStop = inMsgArray[5 - ofs]/10;\n\n    switch (inMsgArray[6 - ofs]) {\n        case 0:\n            Must.setOverloadRestart = 0;\n            Must.OverloadRestartText = \"ON\";\n            break;\n        case 1:\n            Must.setOverloadRestart = 1;\n            Must.OverloadRestartText = \"OFF\";\n            break;\n\n    }\n\n}\n\nMust.DateTime = new Date().toLocaleString('ru-RU');\n\n\nmsg.payload = Must;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 240,
+        "wires": [
+            [
+                "52ba4517499220e4",
+                "3c6c3724a591d987",
+                "737c689959f830f4"
+            ]
+        ]
+    },
+    {
+        "id": "52ba4517499220e4",
+        "type": "debug",
+        "z": "6ec88b1ef275ca40",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 920,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "362f4b1549ea105c",
+        "type": "json",
+        "z": "6ec88b1ef275ca40",
+        "name": "",
+        "property": "payload",
+        "action": "str",
+        "pretty": false,
+        "x": 570,
+        "y": 460,
+        "wires": [
+            [
+                "52ba4517499220e4",
+                "a6a69c48107919ed"
+            ]
+        ]
+    },
+    {
+        "id": "a6a69c48107919ed",
+        "type": "mqtt out",
+        "z": "6ec88b1ef275ca40",
+        "name": "",
+        "topic": "lvb/solar/must2000pk",
+        "qos": "0",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "b2e4a8770521f57e",
+        "x": 1100,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "9380deceb8f1ab0f",
+        "type": "function",
+        "z": "6ec88b1ef275ca40",
+        "name": "MustClass",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "//2 запрос параметров\n//var list = [0x0A, 0x03, 0x75, 0x4E, 0x00, 0x0C];  \n\n//3 запрос параметров\n//var list = [0x0A, 0x03, 0x79, 0x18, 0x00, 0x0a];  \n\n//4 запрос параметров\n//var list = [0x0A, 0x03, 0x79, 0x23, 0x00, 0x08];  \n\n//5 запрос параметров\n//var list = [0x0A, 0x03, 0x79, 0x7c, 0x00, 0x08];\nclass Must2000PK {\n\n\n    constructor() {\n\n        this.device_id = 10; \n        this.lastGetQueryNumber=-1;\n        this.query1 = [0x0A, 0x03, 0x75, 0x30, 0x00, 0x1B];\n        this.queryList=[];\n\n\n        this.queryList.push(\n            {\n            \"queryId\": 0 ,\n            \"queryName\": \"Info0\",\n            \"queryAdress\": 30000,\n            \"queryLength\": 27\n            }  );\n        this.queryList.push(\n            {\n                \"queryId\": 1,\n                \"queryName\": \"Info1\",\n                \"queryAdress\": 30030,\n                \"queryLength\": 12\n            }  );\n        this.queryList.push(\n            {\n                \"queryId\": 2,\n                \"queryName\": \"Info2\",\n                \"queryAdress\": 31000,\n                \"queryLength\": 10\n            }  );    \n        this.queryList.push(\n            {\n                \"queryId\": 3,\n                \"queryName\": \"Info3\",\n                \"queryAdress\": 31011,\n                \"queryLength\": 8\n            });  \n        // this.queryList.push(\n        //     {\n        //         \"queryId\": 4,\n        //         \"queryName\": \"Info4\",\n        //         \"queryAdress\": 31100,\n        //         \"queryLength\": 8\n        //     });              \n\n        this.queryListLength = this.queryList.length;\n        this.lastQueryId=0;\n\n        \n        this.Must={};\n\n        //30000\n        this.Must.version = 24201;\n        this.Must.status = 4;\n        this.Must.statusText = \"\";\n        this.Must.systemVoltage = 24;\n        this.Must.systemPower = 24;\n        this.Must.inVoltageAC = 230;\n        this.Must.inFrquencyAC = 50.0;\n        this.Must.outVoltageAC = 230;\n        this.Must.outFrquencyAC = 50;\n        this.Must.loadCurrentAC = 0;\n        this.Must.loadPowerW = 0;\n        this.Must.loadPowerVA = 0;\n        this.Must.loadPowerPercent = 0;\n        this.Must.batteryVoltageDC = 24;\n        this.Must.batteryCurrentDC = 0;  \n        this.Must.batteryPower = 0 ;\n        this.Must.batterySOH = 100; \n        this.Must.inverterTemp = 20;  \n        //30030\n        this.Must.PvTemp = 20;  \n        this.Must.PvVoltageDC = 0;  \n        this.Must.PvCurrentDC = 0;  \n        this.Must.PvPowerW = 0;  \n        //31000\n        this.Must.setFrquencyAC = 0;\n        this.Must.FrquencyAcText=\"50 Hz\";\n        this.Must.setVoltageAC = 230;\n        this.Must.setShutdownVoltage = 21.1;\n        this.Must.setAbsorbitionChargeVoltage = 27.1;\n        this.Must.setFloatChargeVoltage = 28.1;\n        this.Must.setMaxChargerCurrent = 15;\n        this.Must.setBuzzer = 1;\n        this.Must.BuzzerText = \"Off\";\n        this.Must.setBackLight = 1;\n        this.Must.BackLightText = \"Off\";\n\n        //31011\n        this.Must.setChargeCurrentFromGridDC = 5;\n        //(0 - SOL, 1 - Utl, 2 - SBU)\n        this.Must.setWorkMode = 1;\n        this.Must.WorkModeText = \"Utl\";\n\n        //31013 - (0 - solarFirst, 1 - onlySolar, 2 - GridFirst, 3 - UnionCharge\n        this.Must.setChargePriority  = 0;\n        this.Must.ChargePriorityText = \"solarFirst\";\n        this.Must.setPoinChargeStop = 28.0;\n        this.Must.setPoinDisChargeStop = 25.0;\n\n        //31017 - Overload Restart(0 - dis, 1 - en)\n\n        this.Must.setOverloadRestart = 0;        \n        this.Must.OverloadRestartText = \"disable\";  \n\n        // 32000 - 1 - Зброс до заводских настроек\n        // 32001 - 1  Restart Inverter\n        // 32002 - 1  Shutdown\n\n\n        this.Must.DateTime = new Date().toLocaleString('ru-RU');\n\n        this.oldMust2000ChkSum=0;\n    }\n\nnextQuery()\n{\n   this.lastGetQueryNumber++;\n    if (this.lastGetQueryNumber >= this.queryList.length )\n    {\n        this.lastGetQueryNumber=0;\n    }\n    let q = this.queryList[this.lastGetQueryNumber];\n    this.lastQueryId = q.queryId;\n    return q;\n}\n\n\n// var list = [0x0A, 0x03, 0x75, 0x30, 0x00, 0x1B];\n//2 запрос параметров\n//var list = [0x0A, 0x03, 0x75, 0x4E, 0x00, 0x0C];  \n\n//3 запрос параметров\n//var list = [0x0A, 0x03, 0x79, 0x18, 0x00, 0x0a];  \n\n//4 запрос параметров\n//var list = [0x0A, 0x03, 0x79, 0x23, 0x00, 0x08];  \n\n//5 запрос параметров\n//var list = [0x0A, 0x03, 0x79, 0x7c, 0x00, 0x08];  \n\n crc16(buffer) {\n    var crc = 0xFFFF;\n    var odd;\n\n    for (var i = 0; i < buffer.length; i++) {\n        crc = crc ^ buffer[i];\n\n        for (var j = 0; j < 8; j++) {\n            odd = crc & 0x0001;\n            crc = crc >> 1;\n            if (odd) {\n                crc = crc ^ 0xA001;\n            }\n        }\n    }\n\n    return crc;\n};\n\n\n addCRC16(list)\n    {\n        let crc = this.crc16(list);\n        list.push(crc % 256);\n        list.push((crc - (crc % 256)) / 256);\n    }\n\ngetInfoFromAdress(adress,length)\n{\n    var listQ = [this.device_id, 0x03];\n    listQ.push((adress - (adress % 256)) / 256);\n    listQ.push(adress % 256);\n  \n    listQ.push((length - (length % 256)) / 256);\n    listQ.push(length % 256);\n\n\n    let crc = this.crc16(listQ);\n    listQ.push(crc % 256);\n    listQ.push((crc - (crc % 256)) / 256);\n    return listQ;\n}\n\n    setInfoToAdress(adress, info_list_unit16)\n    {\n        let info = info_list_unit16;\n        var listQ = [this.device_id, 0x10];\n        var length = info.length; \n\n        listQ.push((adress - (adress % 256)) / 256);\n        listQ.push(adress % 256);\n\n        listQ.push((length - (length % 256)) / 256);\n        listQ.push(length % 256);\n\n        listQ.push(0x02); //начало массива данных\n\n        info.forEach(function(element) {\n            listQ.push((element - (element % 256)) / 256);\n            listQ.push(element % 256);\n          \n        });\n\n        let crc = this.crc16(listQ);\n        listQ.push(crc % 256);\n        listQ.push((crc - (crc % 256)) / 256);\n        \n        return listQ;\n\n    }\n\n    chekSumMustObj()\n    {\n       var cks=0;\n        var Mobj = this.Must\n        for (var key in Mobj) {\n            if (key !=\"DateTime\")\n            {   \n               let s=\"\"+Mobj[key];\n               for (let i = 0; i < s.length; i++) {\n                   cks = cks + s.charCodeAt(i);\n               } \n            }\n            \n        }\n        return cks;\n    }\n\n}\n\n\n\n\n//var SieDem = new SiemensDimension.SiemensDem;\nvar Must2000 = new Must2000PK;\nflow.set('Must2000', Must2000);\n\n",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 40,
+        "wires": [
+            [
+                "3138f4e8158ebe9e"
+            ]
+        ]
+    },
+    {
+        "id": "3138f4e8158ebe9e",
+        "type": "function",
+        "z": "6ec88b1ef275ca40",
+        "name": "Следующий запрос",
+        "func": "var Must2000 = flow.get('Must2000');\nif ((msg.topic != undefined)&& (msg.topic!=\"\"))\n{\n    // node.warn(msg.topic);\n    msg.topic = \"\";\n    Must2000.lastQueryId=-1;\n}    \nelse\n{\nvar q = Must2000.nextQuery();\n// node.warn(q);\nmsg.payload = Buffer.from(Must2000.getInfoFromAdress(q.queryAdress, q.queryLength));\n}\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 40,
+        "wires": [
+            [
+                "d789b46c3439833a",
+                "38b77970f7c6e1a8"
+            ]
+        ]
+    },
+    {
+        "id": "d789b46c3439833a",
+        "type": "debug",
+        "z": "6ec88b1ef275ca40",
+        "name": "debug 8",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 980,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "422545b40e4aa9b5",
+        "type": "inject",
+        "z": "6ec88b1ef275ca40",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 560,
+        "wires": [
+            [
+                "725bedb79e12336a"
+            ]
+        ]
+    },
+    {
+        "id": "8b14b2e99073c267",
+        "type": "function",
+        "z": "6ec88b1ef275ca40",
+        "name": "getInfo",
+        "func": "var Must2000 = flow.get('Must2000');\nvar q = {};\nq.queryAdress=msg.payload.adress;\nq.queryLength = msg.payload.length;\nnode.warn(q);\nmsg.payload = Buffer.from(Must2000.getInfoFromAdress(q.queryAdress, q.queryLength));\nmsg.getInfo=true;\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 560,
+        "wires": [
+            [
+                "23a10c295d52c6de"
+            ]
+        ]
+    },
+    {
+        "id": "d6cd4af01f5c7907",
+        "type": "comment",
+        "z": "6ec88b1ef275ca40",
+        "name": "Modbus",
+        "info": "Must2000\n\n\n30000 \n\n2|24201|4|24|1200|2370|499|2359|499|0|0|0|0|0|273|65530|0|100|27|0|0|0|0|0|0|1|1|\n\n1 -прошивка\n\n2  -  ( 1- INIT STATE, SELF_CHEK, 3 -BACKUP, 4 - LINE,5 -  STOP =5 , 6 - power_OFF ,7 - CHARGER, 8 - SOFT_START)\n\n3 - вольтаж аккумов стандарт\n4 - мощность инвертора по умолчаниию\n\n\n5 - входящее напряжени /10\n6 - входящая частота /10\n\n7 - исходящее напряжение /10\n8 - исходящая частота /10\n\n9 - ток  нагрузки сети  /10 (220 ток)\n10 - мощность нагрузки W\n11 - нагрузка VA\n12 - нагрузка в %\n\n\n\n\n\n14 - напряжение аккума\n15 - ток аккума (65536 -  Значение)  / 10\n17 - SOH. Процент батареи заряда\n\n18 - температура инвертора\n21 - ошибки  инвертора(2 - инвертор перегрев,4 -ошибка низкий уровень батареи,)\n22 - (1 - ошибка низкий уровень батареи,2 - перегрузка , 3 - (1+2) , 4 -низкий уровень напряжения в сетиб , 8 - напряжение больше нормі, 16 -Частота сети ниже нормі, 32 -частота сети выше нормы,\n64 - PV - перегрев, 128- высокое напряжение аккума)\n\n\"1|1|1|29|280|86|238|0|0|0|1|3|\"\n\n30030\n1 - (1 - норм  0 - ошибка панелей)\n2 - (1- ток от панелей к инвертору, 0 - нет тока)\n3 - PV -temp\n4 - PV Voltage\n5 - pv ток\n6 - PV - power\n\n31000\n0 - (0 -50Hz, 1-60Hz)\n1 - (220v, 230v)\n2 -Shutdown Voltage *10\n3 - AbsorbitionChargeVoltage *10\n4 - FloatChargeVoltage *10\n5 - MaxChargerCurrent\n6 - Buzzer (0 - normal,  1 - Silence)\n\n9 - backlight (0 - dis, 1 -en)\n\n31011 - ток заряда от сети  Dc (5A)  A \n31012 - (0 -  SOL, 1 -Utl ,2 - SBU)\n31013 - (0 - solarFirst, 1  - onlySolar, 2 -GridFirst, 3 -UnionCharge\n31014 - Poin2 Ina V.   28V *10\n31015 - Point2 Grid V 25 V *10\n31016 - Overload Restart( 1 -des, 0 - en)\n\n32000  - 1  - Зброс до заводских настроек\n32001  - 1  Restart Inverter\n32002  - 1  Shutdown\n\n\n\n\nhttps://github.com/dylangmiles/docker-must-homeassistant/blob/main/src/inverter/Ph1800.json\n\n\n\n\n",
+        "x": 100,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "3067a27f47628376",
+        "type": "inject",
+        "z": "6ec88b1ef275ca40",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 660,
+        "wires": [
+            [
+                "2762775531211f39"
+            ]
+        ]
+    },
+    {
+        "id": "2762775531211f39",
+        "type": "function",
+        "z": "6ec88b1ef275ca40",
+        "name": "setInfo - restart",
+        "func": "var Must2000 = flow.get('Must2000');\n\nvar adress = 32001;\nvar info_list_unit16=[1];\n\n\nvar query = Must2000.setInfoToAdress(adress, info_list_unit16);\nmsg.payload = Buffer.from(query);\nmsg.topic = msg.payload;\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 660,
+        "wires": [
+            [
+                "23a10c295d52c6de"
+            ]
+        ]
+    },
+    {
+        "id": "f976d8fafac73d1a",
+        "type": "function",
+        "z": "6ec88b1ef275ca40",
+        "name": "Utl",
+        "func": "var Must2000 = flow.get('Must2000');\n\nvar adress = 31012;\nvar info_list_unit16 = [1];\n\n\nvar query = Must2000.setInfoToAdress(adress, info_list_unit16);\nmsg.payload = Buffer.from(query);\nmsg.topic = msg.payload;\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 290,
+        "y": 780,
+        "wires": [
+            [
+                "23a10c295d52c6de"
+            ]
+        ]
+    },
+    {
+        "id": "199f791dd4835b22",
+        "type": "inject",
+        "z": "6ec88b1ef275ca40",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 780,
+        "wires": [
+            [
+                "f976d8fafac73d1a"
+            ]
+        ]
+    },
+    {
+        "id": "ee7b070a01751b15",
+        "type": "function",
+        "z": "6ec88b1ef275ca40",
+        "name": "SOL",
+        "func": "var Must2000 = flow.get('Must2000');\n\nvar adress = 31012;\nvar info_list_unit16 = [0];\n\n\nvar query = Must2000.setInfoToAdress(adress, info_list_unit16);\nmsg.payload = Buffer.from(query);\nmsg.topic = msg.payload;\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 290,
+        "y": 860,
+        "wires": [
+            [
+                "23a10c295d52c6de"
+            ]
+        ]
+    },
+    {
+        "id": "642f47355ba22a54",
+        "type": "inject",
+        "z": "6ec88b1ef275ca40",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 860,
+        "wires": [
+            [
+                "ee7b070a01751b15"
+            ]
+        ]
+    },
+    {
+        "id": "2d43165ee6337429",
+        "type": "function",
+        "z": "6ec88b1ef275ca40",
+        "name": "SBU",
+        "func": "var Must2000 = flow.get('Must2000');\n\nvar adress = 31012;\nvar info_list_unit16 = [2];\n\n\nvar query = Must2000.setInfoToAdress(adress, info_list_unit16);\nmsg.payload = Buffer.from(query);\nmsg.topic = msg.payload;\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 290,
+        "y": 940,
+        "wires": [
+            [
+                "23a10c295d52c6de"
+            ]
+        ]
+    },
+    {
+        "id": "7c8d19b1c2cb7635",
+        "type": "inject",
+        "z": "6ec88b1ef275ca40",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 940,
+        "wires": [
+            [
+                "2d43165ee6337429"
+            ]
+        ]
+    },
+    {
+        "id": "1b4ec785da1383c0",
+        "type": "function",
+        "z": "6ec88b1ef275ca40",
+        "name": "Запрос с формы",
+        "func": "var Must2000 = flow.get('Must2000');\n\nvar adress = msg.payload.adress;\nvar info_list_unit16 = [msg.payload.val];\n\n\nvar query = Must2000.setInfoToAdress(adress, info_list_unit16);\nmsg.payload = Buffer.from(query);\nmsg.topic = msg.payload;\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 870,
+        "y": 780,
+        "wires": [
+            [
+                "23a10c295d52c6de"
+            ]
+        ]
+    },
+    {
+        "id": "662f10836bc7c6e1",
+        "type": "function",
+        "z": "6ec88b1ef275ca40",
+        "name": "Переключение WorkMode",
+        "func": "var minVoltage=26;\nvar maxVoltage=28;\n\nvar Must2000 = flow.get('Must2000');\nvar Must = Must2000.Must;\nmsg.setWorkMode = false; \n\n\n\nif ((Must.setWorkMode == 0) && (Must.batteryVoltageDC <= minVoltage)\n  && (Must2000.lastQueryId == Must2000.queryListLength-1))\n{\n  //set UTL\n  msg.setWorkMode=true;\n  Must.setWorkMode = 1;\n  \n  var adress = 31012;\n  var info_list_unit16 = [1];\n\n\n  var query = Must2000.setInfoToAdress(adress, info_list_unit16);\n  msg.payload = Buffer.from(query);\n  msg.topic = msg.payload;\n  Must2000.oldMust2000ChkSum=0;\n  \n}\n\nif ((Must.setWorkMode == 1) && (Must.batteryVoltageDC >= maxVoltage)\n  && (Must2000.lastQueryId == Must2000.queryListLength - 1)) {\n  //set SOL\n  msg.setWorkMode = true;\n  Must.setWorkMode = 0;\n\n  var adress = 31012;\n  var info_list_unit16 = [0];\n\n\n  var query = Must2000.setInfoToAdress(adress, info_list_unit16);\n  msg.payload = Buffer.from(query);\n  msg.topic = msg.payload;\n  Must2000.oldMust2000ChkSum = 0;\n}\n\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 180,
+        "y": 360,
+        "wires": [
+            [
+                "aa3e2592320b18bc"
+            ]
+        ]
+    },
+    {
+        "id": "aa3e2592320b18bc",
+        "type": "switch",
+        "z": "6ec88b1ef275ca40",
+        "name": "",
+        "property": "setWorkMode",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "false"
+            },
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 430,
+        "y": 340,
+        "wires": [
+            [
+                "362f4b1549ea105c"
+            ],
+            [
+                "3138f4e8158ebe9e"
+            ]
+        ]
+    },
+    {
+        "id": "3c6c3724a591d987",
+        "type": "function",
+        "z": "6ec88b1ef275ca40",
+        "name": "Проверка чексумы ",
+        "func": "var Must2000 = flow.get('Must2000');\nvar obj=msg.payload;\n// list.DateTime=\"\";\n\nvar list = Object.entries(obj);\nmsg.list = list;\nmsg.newInfo = false;\nvar chks =Must2000.chekSumMustObj();\n\nmsg.chks = chks;\nif ((Must2000.oldMust2000ChkSum != chks)&&\n  (Must2000.lastQueryId == Must2000.queryListLength - 1))\n{\n    Must2000.oldMust2000ChkSum = chks;\n    msg.newInfo=true;\n    return msg;\n}\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 220,
+        "y": 300,
+        "wires": [
+            [
+                "662f10836bc7c6e1"
+            ]
+        ]
+    },
+    {
+        "id": "23a10c295d52c6de",
+        "type": "function",
+        "z": "6ec88b1ef275ca40",
+        "name": "мост",
+        "func": "var Must2000 = flow.get('Must2000');\nMust2000.lastQueryId = Must2000.queryListLength - 1;\nMust2000.oldMust2000ChkSum=0;\nmsg.topic=msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 560,
+        "wires": [
+            [
+                "3138f4e8158ebe9e"
+            ]
+        ]
+    },
+    {
+        "id": "cae616d9cb16bace",
+        "type": "mqtt in",
+        "z": "6ec88b1ef275ca40",
+        "name": "WorkModeSet",
+        "topic": "lvb/solar/must2000pk/workmode/set",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "b2e4a8770521f57e",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 90,
+        "y": 1000,
+        "wires": [
+            [
+                "a20881a622ffca45"
+            ]
+        ]
+    },
+    {
+        "id": "a20881a622ffca45",
+        "type": "switch",
+        "z": "6ec88b1ef275ca40",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "2",
+                "vt": "num"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 3,
+        "x": 270,
+        "y": 1000,
+        "wires": [
+            [
+                "ee7b070a01751b15"
+            ],
+            [
+                "f976d8fafac73d1a"
+            ],
+            [
+                "2d43165ee6337429"
+            ]
+        ]
+    },
+    {
+        "id": "4bbd51828700959b",
+        "type": "mqtt in",
+        "z": "6ec88b1ef275ca40",
+        "name": "Reset",
+        "topic": "lvb/solar/must2000pk/reset/set",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "b2e4a8770521f57e",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 90,
+        "y": 700,
+        "wires": [
+            [
+                "2762775531211f39"
+            ]
+        ]
+    },
+    {
+        "id": "76b276f4e1242ddb",
+        "type": "subflow:92339ac38c434f5f",
+        "z": "6ec88b1ef275ca40",
+        "name": "",
+        "x": 630,
+        "y": 780,
+        "wires": [
+            [
+                "1b4ec785da1383c0"
+            ]
+        ]
+    },
+    {
+        "id": "4724f91caeb98f0e",
+        "type": "ui_form",
+        "z": "6ec88b1ef275ca40",
+        "name": "getInfo",
+        "label": "getInfo",
+        "group": "7c68cb528fa3b4aa",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "Adress",
+                "value": "adress",
+                "type": "number",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Length",
+                "value": "length",
+                "type": "number",
+                "required": false,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "adress": "",
+            "length": ""
+        },
+        "payload": "",
+        "submit": "submit",
+        "cancel": "cancel",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "className": "",
+        "x": 280,
+        "y": 440,
+        "wires": [
+            [
+                "8b14b2e99073c267",
+                "534371e350fff55b"
+            ]
+        ]
+    },
+    {
+        "id": "534371e350fff55b",
+        "type": "function",
+        "z": "6ec88b1ef275ca40",
+        "name": "function 10",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 270,
+        "y": 500,
+        "wires": [
+            [
+                "4724f91caeb98f0e"
+            ]
+        ]
+    },
+    {
+        "id": "725bedb79e12336a",
+        "type": "function",
+        "z": "6ec88b1ef275ca40",
+        "name": "function 11",
+        "func": "msg.payload={\"adress\": 30000,\"length\":1};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 110,
+        "y": 440,
+        "wires": [
+            [
+                "4724f91caeb98f0e"
+            ]
+        ]
+    },
+    {
+        "id": "fc23789a1c092acd",
+        "type": "function",
+        "z": "6ec88b1ef275ca40",
+        "name": "function 12",
+        "func": "if (msg.getInfo==true)\n{\n    msg.getInfo == false;\n    return msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 770,
+        "y": 180,
+        "wires": [
+            [
+                "ab5ba88639aab62c",
+                "caaf17fcb48486b9"
+            ]
+        ]
+    },
+    {
+        "id": "ab5ba88639aab62c",
+        "type": "debug",
+        "z": "6ec88b1ef275ca40",
+        "name": "debug 9",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1100,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "caaf17fcb48486b9",
+        "type": "ui_text",
+        "z": "6ec88b1ef275ca40",
+        "group": "7c68cb528fa3b4aa",
+        "order": 2,
+        "width": "6",
+        "height": "1",
+        "name": "",
+        "label": "Info",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 1090,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "737c689959f830f4",
+        "type": "subflow:db303f09e343fc96",
+        "z": "6ec88b1ef275ca40",
+        "name": "",
+        "x": 920,
+        "y": 420,
+        "wires": []
+    }
+]
