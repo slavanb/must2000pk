@@ -1208,7 +1208,7 @@
         "func": "\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "initialize": "//2 запрос параметров\n//var list = [0x0A, 0x03, 0x75, 0x4E, 0x00, 0x0C];  \n\n//3 запрос параметров\n//var list = [0x0A, 0x03, 0x79, 0x18, 0x00, 0x0a];  \n\n//4 запрос параметров\n//var list = [0x0A, 0x03, 0x79, 0x23, 0x00, 0x08];  \n\n//5 запрос параметров\n//var list = [0x0A, 0x03, 0x79, 0x7c, 0x00, 0x08];\nclass Must2000PK {\n\n\n    constructor() {\n        //Автоматическое переключение между режимами UTL и SOL\n        this.autoBuferMode=true;\n        this.autoBufferMinVoltage = 3.68*7;\n        this.autoBufferMaxVoltage = 3.9*7;\n        this.autoBufferModeType = 2; //(0 - SOL, 1 - Utl, 2 - SBU)\n\n        this.autoBufferTimerOn = true;\n\n        this.autoBufferHourOn = 8;\n        this.autoBufferHourOff = 22;\n\n\n        this.device_id = 10; \n        this.lastGetQueryNumber=-1;\n        this.query1 = [0x0A, 0x03, 0x75, 0x30, 0x00, 0x1B];\n        this.queryList=[];\n\n\n        this.queryList.push(\n            {\n            \"queryId\": 0 ,\n            \"queryName\": \"Info0\",\n            \"queryAdress\": 30000,\n            \"queryLength\": 27\n            }  );\n        this.queryList.push(\n            {\n                \"queryId\": 1,\n                \"queryName\": \"Info1\",\n                \"queryAdress\": 30030,\n                \"queryLength\": 12\n            }  );\n        this.queryList.push(\n            {\n                \"queryId\": 2,\n                \"queryName\": \"Info2\",\n                \"queryAdress\": 31000,\n                \"queryLength\": 10\n            }  );    \n        this.queryList.push(\n            {\n                \"queryId\": 3,\n                \"queryName\": \"Info3\",\n                \"queryAdress\": 31011,\n                \"queryLength\": 8\n            });  \n        // this.queryList.push(\n        //     {\n        //         \"queryId\": 4,\n        //         \"queryName\": \"Info4\",\n        //         \"queryAdress\": 31100,\n        //         \"queryLength\": 8\n        //     });              \n\n        this.queryListLength = this.queryList.length;\n        this.lastQueryId=0;\n\n        \n        this.Must={};\n\n        //30000\n        this.Must.version = 24201;\n        this.Must.status = 4;\n        this.Must.statusText = \"\";\n        this.Must.systemVoltage = 24;\n        this.Must.systemPower = 24;\n        this.Must.inVoltageAC = 230;\n        this.Must.inFrquencyAC = 50.0;\n        this.Must.outVoltageAC = 230;\n        this.Must.outFrquencyAC = 50;\n        this.Must.loadCurrentAC = 0;\n        this.Must.loadPowerW = 0;\n        this.Must.loadPowerVA = 0;\n        this.Must.loadPowerPercent = 0;\n        this.Must.batteryVoltageDC = 24;\n        this.Must.batteryCurrentDC = 0;  \n        this.Must.batteryPower = 0 ;\n        this.Must.batterySOH = 100; \n        this.Must.inverterTemp = 20;  \n        //30030\n        this.Must.PvTemp = 20;  \n        this.Must.PvVoltageDC = 0;  \n        this.Must.PvCurrentDC = 0;  \n        this.Must.PvPowerW = 0;  \n        //31000\n        this.Must.setFrquencyAC = 0;\n        this.Must.FrquencyAcText=\"50 Hz\";\n        this.Must.setVoltageAC = 230;\n        this.Must.setShutdownVoltage = 21.1;\n        this.Must.setAbsorbitionChargeVoltage = 27.1;\n        this.Must.setFloatChargeVoltage = 28.1;\n        this.Must.setMaxChargerCurrent = 15;\n        this.Must.setBuzzer = 1;\n        this.Must.BuzzerText = \"Off\";\n        this.Must.setBackLight = 1;\n        this.Must.BackLightText = \"Off\";\n\n        //31011\n        this.Must.setChargeCurrentFromGridDC = 5;\n        //(0 - SOL, 1 - Utl, 2 - SBU)\n        this.Must.setWorkMode = 1;\n        this.Must.WorkModeText = \"Utl\";\n\n        //31013 - (0 - solarFirst, 1 - onlySolar, 2 - GridFirst, 3 - UnionCharge\n        this.Must.setChargePriority  = 0;\n        this.Must.ChargePriorityText = \"solarFirst\";\n        this.Must.setPoinChargeStop = 28.0;\n        this.Must.setPoinDisChargeStop = 25.0;\n\n        //31017 - Overload Restart(0 - dis, 1 - en)\n\n        this.Must.setOverloadRestart = 0;        \n        this.Must.OverloadRestartText = \"disable\";  \n\n        // 32000 - 1 - Зброс до заводских настроек\n        // 32001 - 1  Restart Inverter\n        // 32002 - 1  Shutdown\n\n\n        this.Must.DateTime = new Date().toLocaleString('ru-RU');\n\n        this.oldMust2000ChkSum=0;\n    }\n\nnextQuery()\n{\n   this.lastGetQueryNumber++;\n    if (this.lastGetQueryNumber >= this.queryList.length )\n    {\n        this.lastGetQueryNumber=0;\n    }\n    let q = this.queryList[this.lastGetQueryNumber];\n    this.lastQueryId = q.queryId;\n    return q;\n}\n\n\n// var list = [0x0A, 0x03, 0x75, 0x30, 0x00, 0x1B];\n//2 запрос параметров\n//var list = [0x0A, 0x03, 0x75, 0x4E, 0x00, 0x0C];  \n\n//3 запрос параметров\n//var list = [0x0A, 0x03, 0x79, 0x18, 0x00, 0x0a];  \n\n//4 запрос параметров\n//var list = [0x0A, 0x03, 0x79, 0x23, 0x00, 0x08];  \n\n//5 запрос параметров\n//var list = [0x0A, 0x03, 0x79, 0x7c, 0x00, 0x08];  \n\n crc16(buffer) {\n    var crc = 0xFFFF;\n    var odd;\n\n    for (var i = 0; i < buffer.length; i++) {\n        crc = crc ^ buffer[i];\n\n        for (var j = 0; j < 8; j++) {\n            odd = crc & 0x0001;\n            crc = crc >> 1;\n            if (odd) {\n                crc = crc ^ 0xA001;\n            }\n        }\n    }\n\n    return crc;\n};\n\n\n addCRC16(list)\n    {\n        let crc = this.crc16(list);\n        list.push(crc % 256);\n        list.push((crc - (crc % 256)) / 256);\n    }\n\ngetInfoFromAdress(adress,length)\n{\n    var listQ = [this.device_id, 0x03];\n    listQ.push((adress - (adress % 256)) / 256);\n    listQ.push(adress % 256);\n  \n    listQ.push((length - (length % 256)) / 256);\n    listQ.push(length % 256);\n\n\n    let crc = this.crc16(listQ);\n    listQ.push(crc % 256);\n    listQ.push((crc - (crc % 256)) / 256);\n    return listQ;\n}\n\n    setInfoToAdress(adress, info_list_unit16)\n    {\n        let info = info_list_unit16;\n        var listQ = [this.device_id, 0x10];\n        var length = info.length; \n\n        listQ.push((adress - (adress % 256)) / 256);\n        listQ.push(adress % 256);\n\n        listQ.push((length - (length % 256)) / 256);\n        listQ.push(length % 256);\n\n        listQ.push(0x02); //начало массива данных\n\n        info.forEach(function(element) {\n            listQ.push((element - (element % 256)) / 256);\n            listQ.push(element % 256);\n          \n        });\n\n        let crc = this.crc16(listQ);\n        listQ.push(crc % 256);\n        listQ.push((crc - (crc % 256)) / 256);\n        \n        return listQ;\n\n    }\n\n    chekSumMustObj()\n    {\n       var cks=0;\n        var Mobj = this.Must\n        for (var key in Mobj) {\n            if (key !=\"DateTime\")\n            {   \n               let s=\"\"+Mobj[key];\n               for (let i = 0; i < s.length; i++) {\n                   cks = cks + s.charCodeAt(i);\n               } \n            }\n            \n        }\n        return cks;\n    }\n\n}\n\n\n\n\n//var SieDem = new SiemensDimension.SiemensDem;\nvar Must2000 = new Must2000PK;\nflow.set('Must2000', Must2000);\n\n",
+        "initialize": "//2 запрос параметров\n//var list = [0x0A, 0x03, 0x75, 0x4E, 0x00, 0x0C];  \n\n//3 запрос параметров\n//var list = [0x0A, 0x03, 0x79, 0x18, 0x00, 0x0a];  \n\n//4 запрос параметров\n//var list = [0x0A, 0x03, 0x79, 0x23, 0x00, 0x08];  \n\n//5 запрос параметров\n//var list = [0x0A, 0x03, 0x79, 0x7c, 0x00, 0x08];\nclass Must2000PK {\n\n\n    constructor() {\n        //Автоматическое переключение между режимами UTL и SOL\n        this.autoBuferMode=true;\n        this.autoBufferMinVoltage = 3.68*7;\n        this.autoBufferMaxVoltage = 3.9*7;\n        this.autoBufferModeType = 2; //(0 - SOL, 1 - Utl, 2 - SBU)\n\n        this.autoBufferTimerOn=true;\n\n        this.autoBufferHourOn = 8;\n        this.autoBufferHourOff = 22;\n\n\n        this.device_id = 10; \n        this.lastGetQueryNumber=-1;\n        this.query1 = [0x0A, 0x03, 0x75, 0x30, 0x00, 0x1B];\n        this.queryList=[];\n\n\n        this.queryList.push(\n            {\n            \"queryId\": 0 ,\n            \"queryName\": \"Info0\",\n            \"queryAdress\": 30000,\n            \"queryLength\": 27\n            }  );\n        this.queryList.push(\n            {\n                \"queryId\": 1,\n                \"queryName\": \"Info1\",\n                \"queryAdress\": 30030,\n                \"queryLength\": 12\n            }  );\n        this.queryList.push(\n            {\n                \"queryId\": 2,\n                \"queryName\": \"Info2\",\n                \"queryAdress\": 31000,\n                \"queryLength\": 10\n            }  );    \n        this.queryList.push(\n            {\n                \"queryId\": 3,\n                \"queryName\": \"Info3\",\n                \"queryAdress\": 31011,\n                \"queryLength\": 8\n            });  \n        // this.queryList.push(\n        //     {\n        //         \"queryId\": 4,\n        //         \"queryName\": \"Info4\",\n        //         \"queryAdress\": 31100,\n        //         \"queryLength\": 8\n        //     });              \n\n        this.queryListLength = this.queryList.length;\n        this.lastQueryId=0;\n\n        \n        this.Must={};\n\n        //30000\n        this.Must.version = 24201;\n        this.Must.status = 4;\n        this.Must.statusText = \"\";\n        this.Must.systemVoltage = 24;\n        this.Must.systemPower = 24;\n        this.Must.inVoltageAC = 230;\n        this.Must.inFrquencyAC = 50.0;\n        this.Must.outVoltageAC = 230;\n        this.Must.outFrquencyAC = 50;\n        this.Must.loadCurrentAC = 0;\n        this.Must.loadPowerW = 0;\n        this.Must.loadPowerVA = 0;\n        this.Must.loadPowerPercent = 0;\n        this.Must.batteryVoltageDC = 24;\n        this.Must.batteryCurrentDC = 0;  \n        this.Must.batteryPower = 0 ;\n        this.Must.batterySOH = 100; \n        this.Must.inverterTemp = 20;  \n        //30030\n        this.Must.PvTemp = 20;  \n        this.Must.PvVoltageDC = 0;  \n        this.Must.PvCurrentDC = 0;  \n        this.Must.PvPowerW = 0;  \n        //31000\n        this.Must.setFrquencyAC = 0;\n        this.Must.FrquencyAcText=\"50 Hz\";\n        this.Must.setVoltageAC = 230;\n        this.Must.setShutdownVoltage = 21.1;\n        this.Must.setAbsorbitionChargeVoltage = 27.1;\n        this.Must.setFloatChargeVoltage = 28.1;\n        this.Must.setMaxChargerCurrent = 15;\n        this.Must.setBuzzer = 1;\n        this.Must.BuzzerText = \"Off\";\n        this.Must.setBackLight = 1;\n        this.Must.BackLightText = \"Off\";\n\n        //31011\n        this.Must.setChargeCurrentFromGridDC = 5;\n        //(0 - SOL, 1 - Utl, 2 - SBU)\n        this.Must.setWorkMode = 1;\n        this.Must.WorkModeText = \"Utl\";\n\n        //31013 - (0 - solarFirst, 1 - onlySolar, 2 - GridFirst, 3 - UnionCharge\n        this.Must.setChargePriority  = 0;\n        this.Must.ChargePriorityText = \"solarFirst\";\n        this.Must.setPoinChargeStop = 28.0;\n        this.Must.setPoinDisChargeStop = 25.0;\n\n        //31017 - Overload Restart(0 - dis, 1 - en)\n\n        this.Must.setOverloadRestart = 0;        \n        this.Must.OverloadRestartText = \"disable\";  \n\n        // 32000 - 1 - Зброс до заводских настроек\n        // 32001 - 1  Restart Inverter\n        // 32002 - 1  Shutdown\n\n\n        this.Must.DateTime = new Date().toLocaleString('ru-RU');\n\n        this.oldMust2000ChkSum=0;\n    }\n\nnextQuery()\n{\n   this.lastGetQueryNumber++;\n    if (this.lastGetQueryNumber >= this.queryList.length )\n    {\n        this.lastGetQueryNumber=0;\n    }\n    let q = this.queryList[this.lastGetQueryNumber];\n    this.lastQueryId = q.queryId;\n    return q;\n}\n\n\n// var list = [0x0A, 0x03, 0x75, 0x30, 0x00, 0x1B];\n//2 запрос параметров\n//var list = [0x0A, 0x03, 0x75, 0x4E, 0x00, 0x0C];  \n\n//3 запрос параметров\n//var list = [0x0A, 0x03, 0x79, 0x18, 0x00, 0x0a];  \n\n//4 запрос параметров\n//var list = [0x0A, 0x03, 0x79, 0x23, 0x00, 0x08];  \n\n//5 запрос параметров\n//var list = [0x0A, 0x03, 0x79, 0x7c, 0x00, 0x08];  \n\n crc16(buffer) {\n    var crc = 0xFFFF;\n    var odd;\n\n    for (var i = 0; i < buffer.length; i++) {\n        crc = crc ^ buffer[i];\n\n        for (var j = 0; j < 8; j++) {\n            odd = crc & 0x0001;\n            crc = crc >> 1;\n            if (odd) {\n                crc = crc ^ 0xA001;\n            }\n        }\n    }\n\n    return crc;\n};\n\n\n addCRC16(list)\n    {\n        let crc = this.crc16(list);\n        list.push(crc % 256);\n        list.push((crc - (crc % 256)) / 256);\n    }\n\ngetInfoFromAdress(adress,length)\n{\n    var listQ = [this.device_id, 0x03];\n    listQ.push((adress - (adress % 256)) / 256);\n    listQ.push(adress % 256);\n  \n    listQ.push((length - (length % 256)) / 256);\n    listQ.push(length % 256);\n\n\n    let crc = this.crc16(listQ);\n    listQ.push(crc % 256);\n    listQ.push((crc - (crc % 256)) / 256);\n    return listQ;\n}\n\n    setInfoToAdress(adress, info_list_unit16)\n    {\n        let info = info_list_unit16;\n        var listQ = [this.device_id, 0x10];\n        var length = info.length; \n\n        listQ.push((adress - (adress % 256)) / 256);\n        listQ.push(adress % 256);\n\n        listQ.push((length - (length % 256)) / 256);\n        listQ.push(length % 256);\n\n        listQ.push(0x02); //начало массива данных\n\n        info.forEach(function(element) {\n            listQ.push((element - (element % 256)) / 256);\n            listQ.push(element % 256);\n          \n        });\n\n        let crc = this.crc16(listQ);\n        listQ.push(crc % 256);\n        listQ.push((crc - (crc % 256)) / 256);\n        \n        return listQ;\n\n    }\n\n    chekSumMustObj()\n    {\n       var cks=0;\n        var Mobj = this.Must\n        for (var key in Mobj) {\n            if (key !=\"DateTime\")\n            {   \n               let s=\"\"+Mobj[key];\n               for (let i = 0; i < s.length; i++) {\n                   cks = cks + s.charCodeAt(i);\n               } \n            }\n            \n        }\n        return cks;\n    }\n\n}\n\n\n\n\n//var SieDem = new SiemensDimension.SiemensDem;\nvar Must2000 = new Must2000PK;\nflow.set('Must2000', Must2000);\n\n",
         "finalize": "",
         "libs": [],
         "x": 370,
@@ -1216,7 +1216,8 @@
         "wires": [
             [
                 "3138f4e8158ebe9e",
-                "7b8a5f3b036547b3"
+                "7b8a5f3b036547b3",
+                "79ca9d811892709d"
             ]
         ]
     },
@@ -1530,7 +1531,7 @@
         "type": "function",
         "z": "6ec88b1ef275ca40",
         "name": "Переключение WorkMode",
-        "func": "// var minVoltage=26;\n// var maxVoltage=28;\n// var minVoltage = 27.3;\n// var maxVoltage=28.7;\n\n\nvar Must2000 = flow.get('Must2000');\n\nvar minVoltage = Must2000.autoBufferMinVoltage;\nvar maxVoltage = Must2000.autoBufferMaxVoltage;\nvar autoBuferMode = Must2000.autoBuferMode;\n\n\nvar Must = Must2000.Must;\nmsg.setWorkMode = false; \n\nvar cur_date = new Date();\nvar cur_hour=cur_date.getHours();\n\nif ((Must.setWorkMode == 1) && (Must.batteryVoltageDC >= maxVoltage) && (autoBuferMode == true)\n  && (Must2000.lastQueryId == Must2000.queryListLength-1))\n{\n\n\n\n  if ( ((Must2000.autoBufferTimerOn == true) && ((cur_hour >= Must2000.autoBufferHourOn) || (cur_hour < Must2000.autoBufferHourOff)) )||(Must2000.autoBufferTimerOn == false) )\n  {\n    //set SOL or SBU 0,2\n\n    // Must.setWorkMode = 2;\n    Must.setWorkMode = Must.autoBufferModeType;\n    msg.setWorkMode = true;\n    var vvv = Must.setWorkMode;\n    var adress = 31012;\n    var info_list_unit16 = [vvv];\n     var query = Must2000.setInfoToAdress(adress, info_list_unit16);\n     msg.payload = Buffer.from(query);\n     msg.topic = msg.payload;\n     Must2000.oldMust2000ChkSum=0;\n    \n  }\n // node.warn(msg.payload);\n  \n}\n\n// this.autoBufferTimerOn = true;\n// this.autoBufferHourOn = 8;\n// this.autoBufferHourOff = 22;\n\nif ( \n    (\n    (((Must.setWorkMode == 0) || (Must.setWorkMode == 2)) && (Must.batteryVoltageDC <= minVoltage)&& (autoBuferMode == true)) \n    || \n    ((Must2000.autoBufferTimerOn == true) && ((cur_hour < Must2000.autoBufferHourOn) || (cur_hour >= Must2000.autoBufferHourOff))&&((Must.setWorkMode == 0) || (Must.setWorkMode == 2)) ) \n    )\n  && (Must2000.lastQueryId == Must2000.queryListLength - 1)) {\n \n\n    //set UTL -  1\n  msg.setWorkMode = true;\n  Must.setWorkMode = 1; // Utl\n\n  var vvv = Must.setWorkMode;\n  \n  var adress = 31012;\n  var info_list_unit16 = [vvv];\n\n\n  var query = Must2000.setInfoToAdress(adress, info_list_unit16);\n  msg.payload = Buffer.from(query);\n  msg.topic = msg.payload;\n  Must2000.oldMust2000ChkSum = 0;\n  \n}\n\n\n\nreturn msg;",
+        "func": "// var minVoltage=26;\n// var maxVoltage=28;\n// var minVoltage = 27.3;\n// var maxVoltage=28.7;\n\n\nvar Must2000 = flow.get('Must2000');\n\nvar minVoltage = Must2000.autoBufferMinVoltage;\nvar maxVoltage = Must2000.autoBufferMaxVoltage;\nvar autoBuferMode = Must2000.autoBuferMode;\nvar autoBufferTimerOn = Must2000.autoBufferTimerOn;\n\n\n\n\nvar Must = Must2000.Must;\nmsg.setWorkMode = false; \n\nvar cur_date = new Date();\nvar cur_hour=cur_date.getHours();\n\nif ((Must.setWorkMode == 1) && (Must.batteryVoltageDC >= maxVoltage) && (autoBuferMode == true)\n  && (Must2000.lastQueryId == Must2000.queryListLength-1))\n{\n\n\n\n  if ( ((autoBufferTimerOn == true) && ((cur_hour >= Must2000.autoBufferHourOn) || (cur_hour < Must2000.autoBufferHourOff)) )||(Must2000.autoBufferTimerOn == false) )\n  {\n    //set SOL or SBU 0,2\n\n    // Must.setWorkMode = 2;\n    Must.setWorkMode = Must.autoBufferModeType;\n    msg.setWorkMode = true;\n    var vvv = Must.setWorkMode;\n    var adress = 31012;\n    var info_list_unit16 = [vvv];\n     var query = Must2000.setInfoToAdress(adress, info_list_unit16);\n     msg.payload = Buffer.from(query);\n     msg.topic = msg.payload;\n     Must2000.oldMust2000ChkSum=0;\n    \n  }\n\n  \n}\n\n// this.autoBufferTimerOn = true;\n// this.autoBufferHourOn = 8;\n// this.autoBufferHourOff = 22;\n\n\nif ( \n    (\n    (((Must.setWorkMode == 0) || (Must.setWorkMode == 2)) && (Must.batteryVoltageDC <= minVoltage)&& (autoBuferMode == true)) \n    || \n    ((autoBufferTimerOn == true) && ((cur_hour < Must2000.autoBufferHourOn) || (cur_hour >= Must2000.autoBufferHourOff))&&((Must.setWorkMode == 0) || (Must.setWorkMode == 2)) ) \n    )\n  && (Must2000.lastQueryId == Must2000.queryListLength - 1)) {\n  \n\n    //set UTL -  1\n  msg.setWorkMode = true;\n  Must.setWorkMode = 1; // Utl\n\n  var vvv = Must.setWorkMode;\n  \n  var adress = 31012;\n  var info_list_unit16 = [vvv];\n\n\n  var query = Must2000.setInfoToAdress(adress, info_list_unit16);\n  msg.payload = Buffer.from(query);\n  msg.topic = msg.payload;\n  Must2000.oldMust2000ChkSum = 0;\n  \n}\n\n\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -1879,7 +1880,7 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 1140,
+        "x": 1080,
         "y": 520,
         "wires": [
             [
@@ -1898,7 +1899,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 950,
+        "x": 850,
         "y": 520,
         "wires": [
             [
@@ -1911,7 +1912,7 @@
         "type": "function",
         "z": "6ec88b1ef275ca40",
         "name": "АвтоРежим",
-        "func": "var Must2000 = flow.get('Must2000');\nMust2000.autoBuferMode = msg.topic ; \nreturn msg;",
+        "func": "var Must2000 = flow.get('Must2000');\n\nMust2000.autoBuferMode = msg.payload ; \nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -1919,6 +1920,76 @@
         "libs": [],
         "x": 1330,
         "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c5366e5aea079db9",
+        "type": "ui_switch",
+        "z": "6ec88b1ef275ca40",
+        "name": "",
+        "label": "Авто переключение по времени",
+        "tooltip": "",
+        "group": "bdfa905fedc753ec",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 1100,
+        "y": 580,
+        "wires": [
+            [
+                "97bbb06e0ba18561"
+            ]
+        ]
+    },
+    {
+        "id": "79ca9d811892709d",
+        "type": "function",
+        "z": "6ec88b1ef275ca40",
+        "name": "АвтоРежим время",
+        "func": "var Must2000 = flow.get('Must2000');\nmsg.payload = Must2000.autoBufferTimerOn ; \nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 850,
+        "y": 580,
+        "wires": [
+            [
+                "c5366e5aea079db9"
+            ]
+        ]
+    },
+    {
+        "id": "97bbb06e0ba18561",
+        "type": "function",
+        "z": "6ec88b1ef275ca40",
+        "name": "АвтоРежим время",
+        "func": "var Must2000 = flow.get('Must2000');\nMust2000.autoBufferTimerOn = msg.payload ; \nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1350,
+        "y": 580,
         "wires": [
             []
         ]
